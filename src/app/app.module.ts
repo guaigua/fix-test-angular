@@ -7,15 +7,16 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
-import { ScheduleAPIService } from './schedule-api.service';
+import { ScheduleAPIService } from './shared/services/schedule-api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatListModule } from '@angular/material/list';
-import { MatTableModule } from '@angular/material/table';
+import { MaterialModule } from './shared/modules/material/material.module';
+
+import { HeaderComponent } from './templates/header/header.component';
+import { FooterComponent } from './templates/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -25,9 +26,8 @@ import { MatTableModule } from '@angular/material/table';
     BrowserAnimationsModule,
     FlexLayoutModule,
 
-    MatTabsModule,
-    MatListModule,
-    MatTableModule,
+    MaterialModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
