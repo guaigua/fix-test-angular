@@ -1,32 +1,24 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxFileDropModule } from 'ngx-file-drop';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-
-import { AppRoutingModule } from './app-routing.module';
-
-import { ScheduleAPIService } from './shared/services/schedule-api.service';
+import { ScheduleAPIService } from 'src/app/shared/services/schedule-api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 
-import { MaterialModule } from './shared/modules/material/material.module';
-
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './templates/header/header.component';
-import { FooterComponent } from './templates/footer/footer.component';
-import { HomepageModule } from './views/homepage/homepage.module';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    HeaderComponent, 
-    FooterComponent,
-
+    HomeComponent,
   ],
   imports: [
-    HomepageModule,
+    CommonModule,
     BrowserModule,
     FormsModule,    
     HttpClientModule,
@@ -36,9 +28,6 @@ import { HomepageModule } from './views/homepage/homepage.module';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,
-    
-  ], 
-  providers: [],
-  bootstrap: [AppComponent],
+  ]
 })
-export class AppModule {}
+export class HomepageModule { }
