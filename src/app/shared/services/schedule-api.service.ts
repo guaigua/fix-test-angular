@@ -4,7 +4,7 @@ import {
   ResponseOptions,
   STATUS,
 } from 'angular-in-memory-web-api';
-import { schedules, channels } from '../models/fake-api';
+import { schedules, channels } from '../utils/fake-api';
 
 export class ScheduleAPIService implements InMemoryDbService {
   private schedules: any = [];

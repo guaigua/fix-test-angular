@@ -30,7 +30,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-19/s150x150/82155853_495819618006168_2122337653864005632_n.jpg?tp=1&_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_ohc=a825I9qCm68AX_rao5-&ccb=7-4&oh=7fc2bb2204e3d74e41dad4bb7afb4a76&oe=608C68B9&_nc_sid=a9513d',
+          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
       },
       socials: [],
     },
@@ -62,7 +62,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-19/s150x150/82155853_495819618006168_2122337653864005632_n.jpg?tp=1&_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_ohc=a825I9qCm68AX_rao5-&ccb=7-4&oh=7fc2bb2204e3d74e41dad4bb7afb4a76&oe=608C68B9&_nc_sid=a9513d',
+          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
       },
       socials: [],
     },
@@ -94,7 +94,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-19/s150x150/82155853_495819618006168_2122337653864005632_n.jpg?tp=1&_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_ohc=a825I9qCm68AX_rao5-&ccb=7-4&oh=7fc2bb2204e3d74e41dad4bb7afb4a76&oe=608C68B9&_nc_sid=a9513d',
+          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
       },
       socials: [],
     },
@@ -126,7 +126,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-19/s150x150/82155853_495819618006168_2122337653864005632_n.jpg?tp=1&_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_ohc=a825I9qCm68AX_rao5-&ccb=7-4&oh=7fc2bb2204e3d74e41dad4bb7afb4a76&oe=608C68B9&_nc_sid=a9513d',
+          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
       },
       socials: [],
     },
@@ -142,7 +142,7 @@ export const channels = [
       full_name: 'frodo bolseiro',
       is_private: false,
       profile_pic_url:
-        'https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-19/s150x150/82155853_495819618006168_2122337653864005632_n.jpg?tp=1&_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_ohc=a825I9qCm68AX_rao5-&ccb=7-4&oh=7fc2bb2204e3d74e41dad4bb7afb4a76&oe=608C68B9&_nc_sid=a9513d',
+        'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
       profile_pic_id: '2226409004837873329_28449666129',
       is_verified: false,
       has_anonymous_profile_picture: false,
