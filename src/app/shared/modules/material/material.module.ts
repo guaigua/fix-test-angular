@@ -26,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSortModule } from '@angular/material/sort';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [],
@@ -35,6 +36,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSliderModule,
     MatTableModule,
     MatTabsModule,
+    MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -62,6 +64,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSliderModule,
     MatTableModule,
     MatTabsModule,
+    MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,

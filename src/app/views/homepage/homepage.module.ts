@@ -11,6 +11,7 @@ import { ScheduleAPIService } from 'src/app/shared/services/schedule-api.service
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
+import { TemplatesModule } from 'src/app/templates/templates.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MaterialModule } from 'src/app/shared/modules/material/material.module'
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,
+    TemplatesModule
   ]
 })
 export class HomepageModule { }

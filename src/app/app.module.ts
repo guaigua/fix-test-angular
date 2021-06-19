@@ -21,8 +21,6 @@ import { HomepageModule } from './views/homepage/homepage.module';
 @NgModule({
   declarations: [
     AppComponent, 
-    HeaderComponent, 
-    FooterComponent,
 
   ],
   imports: [

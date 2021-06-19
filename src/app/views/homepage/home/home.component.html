@@ -1,9 +1,10 @@
+<app-header></app-header>
 <div fxLayout="column" fxLayoutGap="40px">
     <header class="page-header" fxFlex="100px" fxLayout="row">
       <section fxFlex="20%">
         <div>
           <figure class="profile-thumbnail">
-            <img class="logo" src="{{ selectedChannel?.user.profile_pic_url }}"/>
+            
             <figcaption class="profile-thumbnail-label">
               <div class="fa-label-content">
                 <div>{{ selectedChannel?.user.username }}</div>
@@ -157,4 +158,4 @@
         </mat-tab-group>
       </section>
     </div>
-  </div>
+</div>
