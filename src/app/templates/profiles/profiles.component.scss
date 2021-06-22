@@ -1,0 +1,118 @@
+
+.image_outer_container{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    position: relative;
+}
+ 
+.image_inner_container{
+    margin: 5px;
+
+    border-radius: 50%;
+    padding: 3px;
+    background: #fff; 
+    background: -webkit-linear-gradient(to bottom, #1976d2, #1e96fa); 
+    background: linear-gradient(to bottom, #1976d2, #1e96fa); 
+}
+
+.image_inner_container img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.image_outer_container .green_icon{
+    background-color: #4cd137;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 25px;
+    width: 25px;
+    border:5px solid white;
+    border-radius: 50%;
+}
+
+.dropdown-menu{
+    width: 250px;
+}
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block;    
+}
+.card{
+    overflow: hidden;
+    border:0 !important;
+    width: 300px;
+    box-shadow: 0px 0px 15px 1px;
+    -webkit-box-shadow:0px 0px 15px 1px;
+}
+.card-body{
+    padding-top: 55px !important;
+}
+.name_container{
+    display: flex;
+    justify-content: center;
+}
+.name{
+    font-size: 20px;
+    font-weight: 700;
+    color: gray;
+    position: relative;
+}
+.username_container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.address{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: gray;
+}
+.follow{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.follow_btn{
+    background: #2196F3;
+    padding: 7px;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.follow_btn:hover{
+    background: #f39c12;
+}
+
+.info_container{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.info{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.info p:first-child{
+    margin-bottom: 0;
+    font-size: 12px;
+    color: gray;
+    text-transform: uppercase;
+    text-align: center;
+}
+.info p:last-child{
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: gray;
+    text-transform: uppercase;
+    text-align: center;
+}
+ 

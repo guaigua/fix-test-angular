@@ -30,7 +30,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
+          'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       },
       socials: [],
     },
@@ -62,7 +62,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
+          'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       },
       socials: [],
     },
@@ -94,7 +94,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
+          'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       },
       socials: [],
     },
@@ -126,7 +126,7 @@ export const schedules = {
         id: 533269,
         username: 'frodobolseirope',
         profile_pic:
-          'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
+          'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       },
       socials: [],
     },
@@ -142,7 +142,7 @@ export const channels = [
       full_name: 'frodo bolseiro',
       is_private: false,
       profile_pic_url:
-        'https://theme.zdassets.com/theme_assets/563387/d821110aef8a35044bed113d505b17f422b6e1a6.png',
+        'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       profile_pic_id: '2226409004837873329_28449666129',
       is_verified: false,
       has_anonymous_profile_picture: false,
@@ -270,7 +270,7 @@ export const channels = [
       full_name: 'Gandalf do Sertão',
       is_private: false,
       profile_pic_url:
-        'https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s150x150/50790055_395297557698545_3563850225976082432_n.jpg?tp=1&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=02nyJhluxWYAX-YFtlv&ccb=7-4&oh=a11120c9a8f69c992440a8ac48a6d011&oe=608E5156&_nc_sid=a9513d',
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       profile_pic_id: '1973459391250053171_11050249559',
       is_verified: false,
       has_anonymous_profile_picture: false,
@@ -399,7 +399,7 @@ export const channels = [
       full_name: 'Lifeline',
       is_private: false,
       profile_pic_url:
-        'https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s150x150/118231682_935421876952376_3673832853711561041_n.jpg?tp=1&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=pR--uRxWRDUAX-IO8os&ccb=7-4&oh=d5c338927afd7d4b83c831e0322e6104&oe=608DCBD6&_nc_sid=a9513d',
+        'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
       profile_pic_id: '2384403504461500972_40294319123',
       is_verified: false,
       has_anonymous_profile_picture: false,
@@ -532,7 +532,7 @@ export const channels = [
       full_name: 'My T-shirt 77',
       is_private: false,
       profile_pic_url:
-        'https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s150x150/57160296_286873902234976_7422085219886301184_n.jpg?tp=1&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=zV3WYsFGiEsAX8hgefo&ccb=7-4&oh=35b89190832d4c2affb9c5ff97dfbf4e&oe=608CB376&_nc_sid=a9513d',
+        'https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHJhbmRvbSUyMHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
       profile_pic_id: '2030105459894927044_7579399388',
       is_verified: false,
       has_anonymous_profile_picture: false,

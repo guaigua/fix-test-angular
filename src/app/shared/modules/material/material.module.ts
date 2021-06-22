@@ -23,6 +23,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSortModule } from '@angular/material/sort';
@@ -56,7 +57,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatExpansionModule,
     MatStepperModule,
     MatDialogModule,
-    MatGridListModule 
+    MatGridListModule,
+    MatBadgeModule
   ],
   exports: [   
     CommonModule,
@@ -84,7 +86,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatExpansionModule,
     MatStepperModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }

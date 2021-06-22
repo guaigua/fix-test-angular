@@ -1,21 +1,86 @@
-<p>gg</p>
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span><img mt="125" class="logo" src="{{ selectedChannel?.user.profile_pic_url }}"/></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>person_add_alt_1</mat-icon>          
-    </button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <div id="sidebar">
+      <div id="dismiss">
+        <mat-icon>close</mat-icon>
+      </div>
 
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-</mat-toolbar>
+      <div class="sidebar-header">
+        <span><img mt="125" class="logo" src="{{ selectedChannel?.user.profile_pic_url }}"/></span>
+        <h3>Angular 11</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <p>Angular Bootstrap Sidebar</p>
+          <li class="active">
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li>
+                      <a href="#">Home 1</a>
+                  </li>
+                  <li>
+                      <a href="#">Home 2</a>
+                  </li>
+                  <li>
+                      <a href="#">Home 3</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">About</a>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                      <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                      <a href="#">Page 3</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Portfolio</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>
+
+      
+  </div>
+
+  <!-- Navbar Content  -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class="col-md-3 col-12">
+        <a class="navbar-brand" href="#"><img class="logo mt-1 mb-1 ml-2" id="logo" alt="logo"  src="../../../assets/img/logo.png"/></a>
+      </div>
+      <div class="col-md-4 col-12">
+        <app-profiles></app-profiles>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+      <div class="col-md-4 col-12 ">
+        <div class="collapse navbar-collapse float-end" id="navbarNavDropdown">
+          <button mat-icon-button class="favorite-icon" aria-label="Help">             
+            <mat-icon>help_outline</mat-icon>
+          </button>
+          <button mat-icon-button class="favorite-icon" aria-label="Notifications">
+            <mat-icon matBadge="15">notifications</mat-icon>
+          </button>
+          <button mat-icon-button type="button" id="sidebarCollapse" class="favorite-icon" aria-label="Account">             
+            <span><img class="thumbnail" src="{{ selectedChannel?.user.profile_pic_url }}"/>
+              {{ selectedChannel?.user.username }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="overlay"></div>
