@@ -3,7 +3,7 @@
   }
 
 .logo{
-    width: 185px;
+  width: 185px; 
 }
 
 body {
@@ -108,7 +108,7 @@ a:focus {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #1e96fa;  
+  background: #1e96fa;
 }
 
 #sidebar ul.components {
@@ -210,6 +210,11 @@ button {
 .favorite-icon{
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.card{
+  border-radius: 5px;
+  width: 185px;
 }
 
 
