@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { ProfilesComponent } from 'src/app/containers/profiles/profiles.component';
 
 
 @Component({
@@ -9,14 +10,20 @@ import { FormGroup } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  private form: FormGroup;
+  private fileForm: FormGroup;
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
+
   }
     
   public changeTab($event) {
-    this.form.patchValue({ type: $event.index === 0 ? 'feed' : 'story' });
+    this.fileForm.patchValue({ type: $event.index === 0 ? 'feed' : 'story' });
   }
+
+
+
 }

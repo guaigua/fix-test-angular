@@ -7,7 +7,8 @@ import { MaterialModule } from '../shared/modules/material/material.module';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { TableScheduleComponent } from './table-schedule/table-schedule.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,11 @@ import { TableScheduleComponent } from './table-schedule/table-schedule.componen
 
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     NgxFileDropModule,
+    ReactiveFormsModule,
+  
    
 
   ],

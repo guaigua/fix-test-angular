@@ -12,10 +12,10 @@ export class HeaderComponent implements OnInit {
 
   public channels: any = [];
   public selectedChannel = null;
-  private form: FormGroup;
+  private fileForm: FormGroup;
 
   constructor(private http: HttpClient) { 
-    this.form = new FormBuilder().group({
+    this.fileForm = new FormBuilder().group({
       channel: null,
       image: null,
       date: [new Date()],
@@ -23,13 +23,9 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  public ngOnInit() { 
 
-
-  public ngOnInit() {
- 
-
-    $(document).ready(function () {
-          
+    $(document).ready(function () {          
       $('#dismiss, .overlay').on('click', function () {
           $('#sidebar').removeClass('active');
           $('.overlay').removeClass('active');
@@ -42,12 +38,18 @@ export class HeaderComponent implements OnInit {
       });
     });
 
-    this.form.patchValue({ type: 'feed' });
+
     this.http.get('api/channels').subscribe((channels) => {
       this.selectedChannel = channels[0];
       this.channels = channels;
-      this.form.patchValue({ channel: channels[0] });
+
     });
+  }
+
+  public selectChannel(channel) {
+    this.selectedChannel = channel;
+    this.fileForm.patchValue({ channel });
+    console.log(this.selectedChannel);
   }
 
 

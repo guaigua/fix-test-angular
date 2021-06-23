@@ -1,4 +1,5 @@
-<div class="container mt-3"> 
+<div class="container mt-3">
+  <form class="container-fluid example-form"  [formGroup]="fileForm"  >
   <div class="satFat-logoBody">
     <ngx-file-drop 
       class="ngx-fileDropBody"
@@ -15,7 +16,8 @@
 
         <div *ngIf="!imageUrl" class="imgNone d-flex flex-column text-center w-100"> 
           <div>Select a Imagen or drag here</div>
-          <button  type="button" (click)="openFileSelector()"><mat-icon class="btn-backup">backup</mat-icon></button>       
+          <button  type="button" (click)="openFileSelector(); fileInput.click()"><mat-icon class="btn-backup">backup</mat-icon></button>
+          <input hidden  #fileInput type="file" accept="image/*" capture="environment" id="image" name="image" formControlName="image">
         </div>
 
         <div *ngIf="imageUrl" class="imgYes">
@@ -47,37 +49,36 @@
       </table>
     </div>
     <hr>
-    <div>
-      <form class="container-fluid example-form">
-        <div class="row">
-          <div class="col-6">
-            <mat-form-field class="example-full-width">
-              <mat-label>Location</mat-label>
-              <input matInput placeholder="Place">
-            </mat-form-field>
-          </div>
-          <div class="col-6">
-            <mat-form-field class="example-full-width">
-              <mat-label>Choose a date in the schedule</mat-label>
-              <input matInput [matDatepicker]="picker">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>          
-          </div>
-        </div>
-        <div class="row">
+    <div>      
+      <div class="row">
+        <div class="col-6">
           <mat-form-field class="example-full-width">
-            <mat-label>Write a caption</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Place" id="location" name="location" formControlName="location">
           </mat-form-field>
         </div>
-        <div class="float-end">
-          <button mat-raised-button color="primary"><mat-icon class="btn-delete">delete</mat-icon></button>      
-          <button mat-button (click)="schedule()"><mat-icon class="btn-send">send</mat-icon></button>
+        <div class="col-6">
+          <mat-form-field class="example-full-width">
+            <mat-label>Choose a date in the schedule</mat-label>
+            <input matInput [matDatepicker]="picker" id="date" name="date" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>          
         </div>
-      </form>
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <mat-label>Write a caption</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..." id="caption" name="caption" formControlName="caption"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="float-end">
+        <button mat-raised-button color="primary" (click)="resetTheForm()"><mat-icon class="btn-delete">delete</mat-icon></button>      
+        <button  mat-button (click)="schedule()"><mat-icon class="btn-send">send</mat-icon></button>
+      </div>      
+      </div>
     </div>
-  </div>
+  </form>
 </div>
 
 

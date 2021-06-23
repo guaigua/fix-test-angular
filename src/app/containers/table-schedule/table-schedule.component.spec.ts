@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { ScheduleAPIService } from 'src/app/shared/services/schedule-api.service';
 import { TableScheduleComponent } from './table-schedule.component';
 
 describe('TableScheduleComponent', () => {
@@ -8,7 +10,9 @@ describe('TableScheduleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableScheduleComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ TableScheduleComponent ],   
+      providers: [ScheduleAPIService]
     })
     .compileComponents();
   });
@@ -20,6 +24,7 @@ describe('TableScheduleComponent', () => {
   });
 
   it('should create', () => {
+    const service: TableScheduleComponent = TestBed.get(ScheduleAPIService);
     expect(component).toBeTruthy();
   });
 });

@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { ScheduleAPIService } from 'src/app/shared/services/schedule-api.service';
 import { ProfilesComponent } from './profiles.component';
 
 describe('ProfilesComponent', () => {
@@ -8,7 +10,9 @@ describe('ProfilesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfilesComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ ProfilesComponent ],
+      providers: [ScheduleAPIService]      
     })
     .compileComponents();
   });
@@ -20,6 +24,7 @@ describe('ProfilesComponent', () => {
   });
 
   it('should create', () => {
+    const service: ProfilesComponent  = TestBed.get(ScheduleAPIService);
     expect(component).toBeTruthy();
   });
 });
