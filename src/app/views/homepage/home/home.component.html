@@ -2,16 +2,23 @@
 
 <div class="container">
 
-  <div fxLayout="column" fxLayoutGap="40px">
+  <div fxLayout="column" >
       
     
       <div fxFlex fxLayout="row">
-        <section fxFlex="500px">
+        <section fxFlex="50">
           <div>
             Agendamentos de {{ schedulePeriod?.start_date | date }} até
             {{ schedulePeriod?.end_date | date }}
           </div>
-          <table mat-table [dataSource]="schedules" class="mat-elevation-z8">
+
+    
+          <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+          </mat-form-field>
+
+          <table mat-table [dataSource]="dataTable" class="mat-elevation-z8">
             <ng-container matColumnDef="type">
               <th mat-header-cell *matHeaderCellDef>Target</th>
               <td mat-cell *matCellDef="let element">{{ element.type }}</td>
@@ -50,78 +57,13 @@
           <button mat-button (click)="schedule()">Agendar</button>
           <mat-tab-group (selectedTabChange)="changeTab($event)">
             <mat-tab label="Novo post">
-              <div class="center">
-                <ngx-file-drop
-                  dropZoneLabel="Drop files here"
-                  (onFileDrop)="dropped($event)"
-                  (onFileOver)="fileOver($event)"
-                  (onFileLeave)="fileLeave($event)"
-                >
-                  <ng-template
-                    ngx-file-drop-content-tmp
-                    let-openFileSelector="openFileSelector"
-                  >
-                    Imagem
-                    <button type="button" (click)="openFileSelector()">
-                      Browse Files
-                    </button>
-                  </ng-template>
-                </ngx-file-drop>
-                <div class="upload-table">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                      </tr>
-                    </thead>
-                    <tbody class="upload-name-style">
-                      <tr *ngFor="let item of files; let i = index">
-                        <td>
-                          <strong>{{ item.relativePath }}</strong>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+              <app-fileupload></app-fileupload>
             </mat-tab>
             <mat-tab label="Novo Story">
-              <div class="center">
-                <ngx-file-drop
-                  dropZoneLabel="Drop files here"
-                  (onFileDrop)="dropped($event)"
-                  (onFileOver)="fileOver($event)"
-                  (onFileLeave)="fileLeave($event)"
-                >
-                  <ng-template
-                    ngx-file-drop-content-tmp
-                    let-openFileSelector="openFileSelector"
-                  >
-                    Imagem
-                    <button type="button" (click)="openFileSelector()">
-                      Browse Files
-                    </button>
-                  </ng-template>
-                </ngx-file-drop>
-                <div class="upload-table">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                      </tr>
-                    </thead>
-                    <tbody class="upload-name-style">
-                      <tr *ngFor="let item of files; let i = index">
-                        <td>
-                          <strong>{{ item.relativePath }}</strong>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+              <app-fileupload></app-fileupload>
             </mat-tab>
           </mat-tab-group>
+
         </section>
       </div>
   </div>

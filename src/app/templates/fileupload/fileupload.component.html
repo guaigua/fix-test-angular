@@ -1,0 +1,68 @@
+<div class="container mt-3"> 
+  <div class="satFat-logoBody">
+    <ngx-file-drop 
+      class="ngx-fileDropBody"
+      dropZoneClassName="satFat-dropZoneBody imgBorderYes"
+      contentClassName="satFat-contentBody"
+      (onFileDrop)="dropped($event)" 
+      (onFileOver)="fileOver($event)" 
+      (onFileLeave)="fileLeave($event)" 
+      accept="image/jpeg, image/png">
+      
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+
+        <img *ngIf="imageUrl" [src]="imageUrl">
+
+        <div *ngIf="!imageUrl" class="imgNone d-flex flex-column text-center w-100"> 
+          <div>Select a Imagen or drag here</div>
+          <button  type="button" (click)="openFileSelector()"><mat-icon class="btn-backup">backup</mat-icon></button>       
+        </div>
+
+        <div *ngIf="imageUrl" class="imgYes">
+          <button class="yukleBtn" type="button" (click)="openFileSelector()"><i class="fas fa-download"></i></button>
+          <button class="silBtn ml-2" (click)="fileRemove()"><i class="fas fa-trash-alt"></i></button>
+        </div>
+      </ng-template>      
+    </ngx-file-drop>
+    <div class="upload-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <td scope="col-1 row">#</td>
+            <th scope="col-10">Name</th>
+            <th scope="col-1">Remove</th>
+          </tr>
+        </thead>
+        <tbody class="upload-name-style">
+          <tr *ngFor="let item of files; let i = index">
+            <td scope="col-1 row">1</td>
+            <td scope="col-10">
+              <strong >{{ item.relativePath }}</strong>
+            </td>
+            <td scope="col-1">
+              <mat-icon (click)="item.remove()">delete</mat-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <form class="container-fluid example-form">
+        <div class="row">
+          <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Place">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="example-full-width">
+            <mat-label>Write a caption</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
