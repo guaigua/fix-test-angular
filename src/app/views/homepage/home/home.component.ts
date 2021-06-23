@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
         end_date: scheduleResponse.end_date,
       };
       this.schedules = scheduleResponse.data;
-       this.dataTable = new MatTableDataSource(this.schedules);
+      this.dataTable = new MatTableDataSource(this.schedules);
     });
   }
 

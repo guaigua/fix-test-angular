@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
 import { FileSystemDirectoryEntry, FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
 
 @Component({
@@ -14,11 +16,15 @@ export class FileuploadComponent implements OnInit {
   flag: any;
 
   public files: NgxFileDropEntry[] = [];
+  public schedules: any = [];
+  public schedulePeriod = null;
+  dataTable: any;
   imageUrl;
 
   private form: FormGroup;
 
-  public constructor( private elRef: ElementRef,) {
+  public constructor( private http: HttpClient,
+    private elRef: ElementRef,) {
     
     this.form = new FormBuilder().group({
       channel: null,
@@ -29,6 +35,14 @@ export class FileuploadComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.http.get('api/schedules').subscribe((scheduleResponse: any) => {
+      this.schedulePeriod = {
+        start_date: scheduleResponse.start_date,
+        end_date: scheduleResponse.end_date,
+      };
+      this.schedules = scheduleResponse.data;
+      this.dataTable = new MatTableDataSource(this.schedules);
+    });
   }
 
   // 
@@ -76,6 +90,23 @@ export class FileuploadComponent implements OnInit {
     const getDropcozneClass = this.elRef.nativeElement.querySelector('.satFat-dropZoneBody');
     getDropcozneClass.classList.remove('imgBorderNone')
     getDropcozneClass.classList.add('imgBorderYes')
+  }
+
+  public schedule() {
+    if (!this.form.valid) return; // TODO: give feedback
+    this.http
+      .post('api/schedules', this.form.value, { responseType: 'json' })
+      .subscribe((data) => {
+        this.form.reset();
+        this.files = [];
+        this.http.get('api/schedules').subscribe((scheduleResponse: any) => {
+          this.schedulePeriod = {
+            start_date: scheduleResponse.start_date,
+            end_date: scheduleResponse.end_date,
+          };
+          this.schedules = scheduleResponse.data;
+        });
+      });
   }
 
 

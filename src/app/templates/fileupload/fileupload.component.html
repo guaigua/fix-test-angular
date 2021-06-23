@@ -46,19 +46,34 @@
         </tbody>
       </table>
     </div>
+    <hr>
     <div>
       <form class="container-fluid example-form">
         <div class="row">
-          <mat-form-field class="example-full-width">
-            <mat-label>Location</mat-label>
-            <input matInput placeholder="Place">
-          </mat-form-field>
+          <div class="col-6">
+            <mat-form-field class="example-full-width">
+              <mat-label>Location</mat-label>
+              <input matInput placeholder="Place">
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="example-full-width">
+              <mat-label>Choose a date in the schedule</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>          
+          </div>
         </div>
         <div class="row">
           <mat-form-field class="example-full-width">
             <mat-label>Write a caption</mat-label>
             <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
           </mat-form-field>
+        </div>
+        <div class="float-end">
+          <button mat-raised-button color="primary"><mat-icon class="btn-delete">delete</mat-icon></button>      
+          <button mat-button (click)="schedule()"><mat-icon class="btn-send">send</mat-icon></button>
         </div>
       </form>
     </div>

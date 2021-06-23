@@ -99,8 +99,26 @@
 .satFat-logoBody .imgYes .silBtn:hover{
   background-color: #1976d2;
 }
+
 .btn-backup{
-  background: #1976d2;
+  color: #fff;
+}
+.btn-delete{
+  color: #1976d2;
+}
+.btn-send{
+  color: #1976d2;
+}
+
+button {
+  background:  transparent;
+  border: none;
+  text-decoration: none;
+  outline:none;
+}
+
+.example-full-width {
+  width: 100%;
 }
 
 
