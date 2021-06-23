@@ -30,4 +30,4 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     FileuploadComponent
   ]
 })
-export class TemplatesModule { }
+export class ContainersModule { }

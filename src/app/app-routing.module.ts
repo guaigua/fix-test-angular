@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FileuploadComponent } from './templates/fileupload/fileupload.component';
-import { ProfilesComponent } from './templates/profiles/profiles.component';
+import { FileuploadComponent } from './containers/fileupload/fileupload.component';
+import { ProfilesComponent } from './containers/profiles/profiles.component';
 import { HomeComponent } from './views/homepage/home/home.component';
 
 
