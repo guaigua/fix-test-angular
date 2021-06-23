@@ -1,79 +1,49 @@
 <div class="container">
-    <div class="d-flex justify-content-center h-56">
-      <a *ngFor="let channel of channels" (click)="selectChannel(channel)">
-        <div class=" show-on-hover">
-          <div class="image_outer_container show-on-hover">
-            <div class="green_icon"></div>
-            <div class="image_inner_container">
-                <img src="{{ channel.user.profile_pic_url }}" />
-            </div>
+  <div class="d-flex justify-content-center h-56">
+    <a *ngFor="let channel of channels" (click)="selectChannel(channel)">
+      <div class=" show-on-hover">
+        <div class="image_outer_container show-on-hover">
+          <div class="green_icon"></div>
+          <div class="image_inner_container">
+              <img src="{{ channel.user.profile_pic_url }}" />
           </div>
-          <ul class="dropdown-menu" role="menu">
-            <div class="container">
-              <div class="row h-100 justify-content-center align-items-center">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-center flex-column">
-                      <div class="name_container">
-                        <div class="name">{{ channel.user.full_name }}</div>                       
-                      </div>
-                      <div class="username_container">
-                        <div class="username">{{ channel.user.username }}</div>
-                      </div>
+        </div>
+        <ul class="dropdown-menu" role="menu">
+          <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-center flex-column">
+                    <div class="name_container">
+                      <div class="name">{{ channel.user.full_name }}</div>                       
                     </div>
-                    <div class="follow">
-                      <div class="follow_btn"> <mat-icon class="follow_icon">person_add_alt_1</mat-icon></div>
+                    <div class="username_container">
+                      <div class="username">{{ channel.user.username }}</div>
                     </div>
-                    <div class="info_container">
-                      <div class="info">
-                        <p>followers</p>
-                        <p>{{ channel.user.follower_count }}</p>								
-                      </div>
-                      <div class="info">
-                        <p>followings</p>
-                        <p>{{ channel.user.following_count }}</p>							
-                      </div>
-                      <div class="info">
-                        <p>posts</p>
-                        <p>3.56K</p>						
-                      </div>			
+                  </div>
+                  <div class="follow">
+                    <div class="follow_btn"> <mat-icon class="follow_icon">person_add_alt_1</mat-icon></div>
+                  </div>
+                  <div class="info_container">
+                    <div class="info">
+                      <p>followers</p>
+                      <p>{{ channel.user.follower_count }}</p>								
                     </div>
+                    <div class="info">
+                      <p>followings</p>
+                      <p>{{ channel.user.following_count }}</p>							
+                    </div>
+                    <div class="info">
+                      <p>posts</p>
+                      <p>3.56K</p>						
+                    </div>			
                   </div>
                 </div>
               </div>
             </div>
-          </ul>
-       
-           
-          
-        </div>
-      </a>
-    </div>     
-  </div>
-
-
-
-    
-
-
-  <!-- <mat-toolbar>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span><img mt="125" class="logo" src="{{ selectedChannel?.user.profile_pic_url }}"/></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>person_add_alt_1</mat-icon>          
-      </button>
-      
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <a class="postgrainBtn smGlobalBtn" href="postgrain.com" ><mat-icon>favorite</mat-icon></a>
-        </button>
-  
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-  </mat-toolbar> -->
+          </div>
+        </ul>
+      </div>
+    </a>
+  </div>     
+</div>

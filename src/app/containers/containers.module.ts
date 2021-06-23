@@ -6,6 +6,7 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { MaterialModule } from '../shared/modules/material/material.module';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
+import { TableScheduleComponent } from './table-schedule/table-schedule.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     HeaderComponent, 
     FooterComponent,
     ProfilesComponent,
-    FileuploadComponent
+    FileuploadComponent,
+    TableScheduleComponent
   ],
 
   imports: [
@@ -27,7 +29,8 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     HeaderComponent,
     FooterComponent,
     ProfilesComponent,
-    FileuploadComponent
+    FileuploadComponent,
+    TableScheduleComponent
   ]
 })
 export class ContainersModule { }
