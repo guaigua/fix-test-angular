@@ -13,6 +13,7 @@ import { DataService } from 'src/app/shared/services/data.service';
 
 })
 export class FileuploadComponent implements OnInit {
+  title = 'Form File';
   @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
   @ViewChild(ProfilesComponent) public profile:ProfilesComponent;
 
