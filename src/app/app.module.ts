@@ -14,9 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './containers/header/header.component';
-import { FooterComponent } from './containers/footer/footer.component';
+
 import { HomepageModule } from './views/homepage/homepage.module';
+import { ContainersModule } from './containers/containers.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { HomepageModule } from './views/homepage/homepage.module';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,
+    ContainersModule
     
   ], 
   providers: [],

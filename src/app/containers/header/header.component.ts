@@ -48,8 +48,8 @@ export class HeaderComponent implements OnInit {
 
   public selectChannel(channel) {
     this.selectedChannel = channel;
-    this.fileForm.patchValue({ channel });
-    console.log(this.selectedChannel);
+    // this.fileForm.patchValue({ channel });
+    // console.log(this.selectedChannel);
   }
 
 

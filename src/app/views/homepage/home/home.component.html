@@ -4,7 +4,8 @@
   <div fxLayout="column">
       <div fxFlex fxLayout="row">
         <section fxFlex="50">
-          <app-table-schedule></app-table-schedule>
+
+          <app-table-schedule [schedules]="dataService.schedules"></app-table-schedule>
         </section>    
         <section fxFlex>
           <mat-tab-group (selectedTabChange)="changeTab($event)">

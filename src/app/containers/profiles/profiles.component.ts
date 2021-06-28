@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-profiles',
@@ -14,7 +14,8 @@ export class ProfilesComponent implements OnInit {
   public selectedChannel: any = {};
   public fileForm: FormGroup;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient,
+    private dataService: DataService) { 
     this.fileForm = new FormBuilder().group({
       channel: null,
       image: null,
@@ -40,8 +41,8 @@ export class ProfilesComponent implements OnInit {
 
   public selectChannel(channel) {
     this.selectedChannel = channel;
-
-    console.log(this.selectedChannel);
+    this.dataService.channel = channel;
+    // console.log(this.selectedChannel);
   }
 
 }

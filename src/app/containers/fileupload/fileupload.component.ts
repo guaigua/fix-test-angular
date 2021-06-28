@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { FileSystemDirectoryEntry, FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
 import { ProfilesComponent } from '../profiles/profiles.component';
 import { HttpClient } from '@angular/common/http';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-fileupload',
@@ -35,8 +36,10 @@ export class FileuploadComponent implements OnInit {
 
   // public fileForm: FormGroup;
 
-  public constructor( private http: HttpClient,
-    private elRef: ElementRef,) {
+  public constructor( 
+    private http: HttpClient,
+    private elRef: ElementRef,
+    public dataService:DataService) {
     
     this.fileForm = new FormBuilder().group({
       location: [null, Validators.compose([Validators.required])],
@@ -85,7 +88,7 @@ export class FileuploadComponent implements OnInit {
         
       } else {
         const fileEntry = droppedFile.fileEntry as FileSystemDirectoryEntry;
-        console.log(droppedFile.relativePath, fileEntry);
+        // console.log(droppedFile.relativePath, fileEntry);
       }
     }
   }
@@ -108,18 +111,11 @@ export class FileuploadComponent implements OnInit {
   }
 
   public schedule() {    
-    // console.log('channel',this.channel);
-    this.fileForm.patchValue({ type: 'feed' });
-    this.fileForm.patchValue({ channel: {
-      id: 533269,
-      user: {     
-        username: 'frodobolseirope',
-        profile_pic_url:
-          'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-      }
-     } });
-
-
+    // console.log('channel',this.dataService.channel);
+    // console.log('type',this.dataService.type);
+    this.fileForm.patchValue({ type: this.dataService.type });
+    this.fileForm.patchValue({ channel: this.dataService.channel });
+    
     // console.log( 'fileForm', this.fileForm.value)
     if (!this.fileForm.valid) return; // TODO: give feedback
     this.http
@@ -133,6 +129,7 @@ export class FileuploadComponent implements OnInit {
             end_date: scheduleResponse.end_date,
           };
           this.schedules = scheduleResponse.data;
+          this.dataService.schedules = this.schedules;
         });
       });
   }
